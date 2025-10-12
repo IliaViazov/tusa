@@ -18,7 +18,7 @@ It features interpreter for Tidal Cycles, snippets window for fast copying preco
 ## Installation
 ```
 cd path-to-directory
-git clone https://github.com/IliaViazov/tidal-nano
+git clone https://github.com/IliaViazov/tidalueb
 ./installation.sh
 ```
 
