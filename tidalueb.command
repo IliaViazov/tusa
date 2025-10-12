@@ -1,6 +1,6 @@
 #!/bin/bash
 cd 
-REAL_PATH=$(readlink -f ~/tidal-nano)
+REAL_PATH=$(readlink -f ~/tidalueb)
 cd "$REAL_PATH"
 
 tmux new-session -d -s mysession

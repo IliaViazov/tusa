@@ -9,10 +9,14 @@ command_exists() {
 }
 
 
-#0.a Creting a symlink from root to the app
-ln -sf $PWD ~/tidal-nano
+#0.a Creating a symlink from root to the app
+ln -sf $PWD ~/tidalueb
 
-#0.b Update Homebrew
+#0.b Creating an icon to the app and .command
+./setIcon.sh logo.png tidalueb.app
+./setIcon.sh logo.png tidalueb.command
+
+#0.c Update Homebrew
 echo "Updating Homebrew..."
 brew update
 
