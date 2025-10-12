@@ -49,8 +49,6 @@ fi
 if ! command_exists nano ; then
     echo "Installing Nano editor..."
     brew install nano
-    git clone https://github.com/scopatz/nanorc.git $install_path
-    echo "include $install_path/*.nanorc" >> ~/.nanorc
     echo "export PATH=\"$PATH\"" >> ~/.bashrc
 else
     echo "Nano already installed."
@@ -65,6 +63,16 @@ if ! command_exists glow ; then
     echo "export PATH=\"$PATH\"" >> ~/.bashrc
 else
     echo "Glow exists"
+    echo "export PATH=\"$PATH\"" >> ~/.bashrc
+fi
+
+# 3.c Install tmux
+if ! command_exists tmux ; then
+    echo "Installing tmux..."
+    brew install tmux
+    echo "export PATH=\"$PATH\"" >> ~/.bashrc
+else
+    echo "tmux already installed."
     echo "export PATH=\"$PATH\"" >> ~/.bashrc
 fi
 

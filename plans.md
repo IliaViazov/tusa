@@ -14,3 +14,15 @@
 setup haskel, tidal for haskel, nano, 
 
 don't forget .nanorc file
+
+
+transfer all shit to tmux through spliting windows
+add source files
+
+nano -rcfile
+
+tmux splitw
+tmux select-pane 0
+repeat
+
+tmux source-file

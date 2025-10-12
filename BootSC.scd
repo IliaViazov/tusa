@@ -23,10 +23,14 @@ s.reboot { // server options are only updated on reboot
             ~d7 = ~dirt.orbits[6]; ~d8 = ~dirt.orbits[7]; ~d9 = ~dirt.orbits[8];
             ~d10 = ~dirt.orbits[9]; ~d11 = ~dirt.orbits[10]; ~d12 = ~dirt.orbits[11];
         );
+		///here the spat
     };
 
     s.latency = 0.3; // increase this if you get "late" messages
 };
+
+
+
 OSCFunc({|msg| msg.postln}, 'status.reply', s.addr);
 s.status;
 );
