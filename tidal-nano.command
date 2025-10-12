@@ -1,4 +1,7 @@
 #!/bin/bash
+cd 
+REAL_PATH=$(readlink -f ~/tidal-nano)
+cd "$REAL_PATH"
 
 tmux new-session -d -s mysession
 tmux source-file .tmux.conf

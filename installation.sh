@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-install_path= ~/.nano
-
 set -e
 
 echo "Starting setup for TidalCycles environment..."
@@ -10,16 +8,11 @@ command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
-# Install Homebrew if not installed
-if ! command_exists brew ; then
-    echo "Homebrew not found. Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo "export PATH=\"$PATH\"" >> ~/.bashrc
-else
-    echo "Homebrew already installed."
-    echo "export PATH=\"$PATH\"" >> ~/.bashrc
-fi
 
+#0.a Creting a symlink from root to the app
+ln -sf $PWD ~/tidal-nano
+
+#0.b Update Homebrew
 echo "Updating Homebrew..."
 brew update
 
@@ -56,7 +49,6 @@ else
 fi
 
 # 3.b Install Glow
-
 if ! command_exists glow ; then
     echo "Installing Glow..."
     brew install glow
@@ -94,7 +86,5 @@ s.waitForBoot {
     "Quarks installed".postln;
 };
 EOL
-
-
 
 echo "Setup complete! Please restart your terminal and enjoy TidalCycles."
