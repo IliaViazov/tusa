@@ -62,8 +62,11 @@ d1 $ "bd sn bd sn"
 
 ## References to the used resources and repos
 Tidal Cycles: https://tidalcycles.org/
+
 vim-tidal: https://github.com/tidalcycles/vim-tidal
+
 Syntax Highlightning for Nano: https://github.com/scopatz/nanorc.git
+
 Colored GHCI: https://github.com/rhysd/ghci-color/tree/master
 
 ## FAQ
