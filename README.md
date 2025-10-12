@@ -58,3 +58,12 @@ Some notes:
     :}
 ~~~
 - the environment automatically loading reference (in process) and snippets.txt. The last one you can overwrite with whatever you want. Unfortunately you can't evaluate from there. I tried to use vim for that, but during evaluation it makes an annoying allert sound. Something that I will try to fix in the future
+
+
+
+### References
+Tidal Cycles: https://tidalcycles.org/
+vim-tidal: https://github.com/tidalcycles/vim-tidal
+Syntax Highlightning for Nano: https://github.com/scopatz/nanorc.git
+Colored GHCI: https://github.com/rhysd/ghci-color/tree/master
+

@@ -5,6 +5,7 @@ set zap
 set tabsize 4
 set tabstospaces
 set atblanks
+# set mouse
 
 syntax "haskell" "\.hs$"
 comment "--"
