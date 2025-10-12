@@ -70,7 +70,7 @@
 				<key>Class Name</key>
 				<string>SpecifiedFilesAction</string>
 				<key>InputUUID</key>
-				<string>228A026B-BDA1-43EE-B5BA-B02D6687F077</string>
+				<string>922C2F24-FED0-401A-A989-4A167280FF30</string>
 				<key>Keywords</key>
 				<array>
 					<string>File</string>
@@ -79,9 +79,9 @@
 					<string>Get</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>07C89AB2-1DE7-4F7A-BCC4-2B89E7E04EFA</string>
+				<string>E812707F-243D-477D-8F59-16FFD7EC718F</string>
 				<key>UUID</key>
-				<string>FEC5FD08-4207-44D9-9996-2569D093FD84</string>
+				<string>579BA8F6-2718-4892-A9A7-E4306B00BC0A</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Finder</string>
@@ -177,7 +177,7 @@
 				<key>Class Name</key>
 				<string>AMOpenFinderItems</string>
 				<key>InputUUID</key>
-				<string>69CE7DCA-6DCC-44CC-9639-193C3FD246E6</string>
+				<string>96A64EBB-965A-4372-BBB5-E96BC71AF00B</string>
 				<key>Keywords</key>
 				<array>
 					<string>Open</string>
@@ -185,9 +185,9 @@
 					<string>File</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>89E12952-F57D-449E-87CC-B3DCDA97D078</string>
+				<string>2527025C-1153-41E4-A9E7-6E38DF0A1B23</string>
 				<key>UUID</key>
-				<string>11FEF7A2-F38A-4BE5-B62C-6AA7970D274D</string>
+				<string>517824F7-6D7E-49CD-96B9-D9EC3D6E6144</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Finder</string>
@@ -208,6 +208,8 @@
 						<string>0</string>
 					</dict>
 				</dict>
+				<key>conversionLabel</key>
+				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
@@ -221,12 +223,12 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>BD9220EC-0D57-4409-8582-616EB0D4E3BA</key>
+		<key>E4D799D9-BCD8-4A97-8E18-BD8A26F0D5A6</key>
 		<dict>
 			<key>from</key>
-			<string>FEC5FD08-4207-44D9-9996-2569D093FD84 - FEC5FD08-4207-44D9-9996-2569D093FD84</string>
+			<string>579BA8F6-2718-4892-A9A7-E4306B00BC0A - 579BA8F6-2718-4892-A9A7-E4306B00BC0A</string>
 			<key>to</key>
-			<string>11FEF7A2-F38A-4BE5-B62C-6AA7970D274D - 11FEF7A2-F38A-4BE5-B62C-6AA7970D274D</string>
+			<string>517824F7-6D7E-49CD-96B9-D9EC3D6E6144 - 517824F7-6D7E-49CD-96B9-D9EC3D6E6144</string>
 		</dict>
 	</dict>
 	<key>workflowMetaData</key>
