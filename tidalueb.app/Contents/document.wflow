@@ -52,7 +52,7 @@
 				<dict>
 					<key>fileNames</key>
 					<array>
-						<string>~/Desktop/Projects/tidal-nano/tidal-nano.command</string>
+						<string>~/Desktop/Projects/tidalueb/tidalueb.command</string>
 					</array>
 				</dict>
 				<key>BundleIdentifier</key>
@@ -70,7 +70,7 @@
 				<key>Class Name</key>
 				<string>SpecifiedFilesAction</string>
 				<key>InputUUID</key>
-				<string>25570600-AC09-43B0-9CE4-D4537C856257</string>
+				<string>228A026B-BDA1-43EE-B5BA-B02D6687F077</string>
 				<key>Keywords</key>
 				<array>
 					<string>File</string>
@@ -79,9 +79,9 @@
 					<string>Get</string>
 				</array>
 				<key>OutputUUID</key>
-				<string>C70B99D8-2342-45DB-9710-CAE7BEA096D3</string>
+				<string>07C89AB2-1DE7-4F7A-BCC4-2B89E7E04EFA</string>
 				<key>UUID</key>
-				<string>D56F025F-4576-46DB-85E2-49973AEE3747</string>
+				<string>FEC5FD08-4207-44D9-9996-2569D093FD84</string>
 				<key>UnlocalizedApplications</key>
 				<array>
 					<string>Finder</string>
@@ -208,8 +208,6 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
@@ -223,10 +221,10 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>BD7B932E-E9F7-424B-96D1-1EA1E35F3F67</key>
+		<key>BD9220EC-0D57-4409-8582-616EB0D4E3BA</key>
 		<dict>
 			<key>from</key>
-			<string>D56F025F-4576-46DB-85E2-49973AEE3747 - D56F025F-4576-46DB-85E2-49973AEE3747</string>
+			<string>FEC5FD08-4207-44D9-9996-2569D093FD84 - FEC5FD08-4207-44D9-9996-2569D093FD84</string>
 			<key>to</key>
 			<string>11FEF7A2-F38A-4BE5-B62C-6AA7970D274D - 11FEF7A2-F38A-4BE5-B62C-6AA7970D274D</string>
 		</dict>

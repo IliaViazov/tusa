@@ -36,11 +36,11 @@
 	<key>CFBundleIconName</key>
 	<string>ApplicationStub</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.automator.tidal-nano</string>
+	<string>com.apple.automator.tidalueb</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>tidal-nano</string>
+	<string>tidalueb</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
