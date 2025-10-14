@@ -38,7 +38,7 @@ The following script assumes that you have installed `git` and `homebrew`. The i
 
 ```sh
 cd path-to-directory
-./tidal-nano.command
+./tidalueb.command
 ```
 or  
 *just double-click* **the .command file**  
