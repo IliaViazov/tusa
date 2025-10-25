@@ -28,5 +28,6 @@ instance Tidally where tidal = tidalInst
 
 -- custom quit command that kills tmux too
 
-:def! q    (\_ -> return ":! ./finish.sh; exit")
-:def! quit (\_ -> return ":! ./finish.sh; exit")
+-- custom quit commands that first hush Tidal, then quit (and run finish.sh)
+:def! q    (\_ -> do {hush; return ":! ./finish.sh; exit" })
+:def! quit (\_ -> do {hush; return ":! ./finish.sh; exit" })
