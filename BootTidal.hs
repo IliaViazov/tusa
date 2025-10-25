@@ -27,6 +27,6 @@ instance Tidally where tidal = tidalInst
 :set prompt-cont ""
 
 -- custom quit command that kills tmux too
-:def q  (\_ -> return ":! if [ -n \"$TMUX\" ]; then tmux kill-server; fi; exit")
-:def quit (\_ -> return ":! if [ -n \"$TMUX\" ]; then tmux kill-server; fi; exit")
+:def! q  (\_ -> return ":! if [ -n \"$TMUX\" ]; then tmux kill-server; fi; exit")
+:def! quit (\_ -> return ":! if [ -n \"$TMUX\" ]; then tmux kill-server; fi; exit")
 
