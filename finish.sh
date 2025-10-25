@@ -23,7 +23,7 @@ rm -f "$CAPTURE_FILE"
 echo "Session is saved"
 
 # Optional: keep only the last 5 .hs files
-MAX_FILES=5
+MAX_FILES=10
 FILES=($(ls -1t "$CAPTURE_DIR" | grep '^session-' | sort))
 COUNT=${#FILES[@]}
 

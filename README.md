@@ -13,7 +13,7 @@ It features an interpreter for Tidal Cycles, a snippets window for fast copying 
 - Stable performance
 - Easy installation
 - Fast boot-up
-- Automatic saving of the session (memory of last 5, but could be increased modifying finish.sh)
+- Automatic saving of the session (memory of last 10, but could be increased modifying finish.sh)
 - Convenient keyboard shortcuts
 - Syntax highlighting
 - Reference as a cheat sheet
