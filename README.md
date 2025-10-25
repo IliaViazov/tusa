@@ -1,3 +1,5 @@
+![Alt text](logo_preview.png)
+
 # tidalueb
 
 tidalueb (*tidal* for *Tidal Cycles*, *-lueb* — wordplay: *-lueb* — *Lübeck*, *-lueb* = *-люб*, Russian analogue for Greek *-phil*) is a framework for Tidal Cycles that aims to provide fast performance, minimalism, and seamless usage during music practices.

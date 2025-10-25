@@ -9,6 +9,8 @@ s.reboot { // server options are only updated on reboot
     s.options.numOutputBusChannels = 2; // set this to your hardware output channel size, if necessary
     s.options.numInputBusChannels = 2; // set this to your hardware output channel size, if necessary
     // boot the server and start SuperDirt
+	// s.options.inDevice = "MacBook Pro Microphone";
+	// s.options.outDevice = "VB-Cable";
     s.waitForBoot {
         ~dirt = SuperDirt(2, s); // two output channels, increase if you want to pan across more channels
         ~dirt.loadSoundFiles;   // load samples (path containing a wildcard can be passed in)
