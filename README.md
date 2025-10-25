@@ -7,6 +7,8 @@ tidalueb (*tidal* for *Tidal Cycles*, *-lueb* — wordplay: *-lueb* — *Lübeck
 The framework functions as a tmux workflow with different panes of a terminal performing different parts of the program.
 It features an interpreter for Tidal Cycles, a snippets window for fast copying of precomposed material, a reference window that represents [the official reference](https://tidalcycles.org/docs/reference/cycles) in a brief format, and a SuperCollider server.
 
+![Alt text](preview_screenshot.png)
+
 ## Features
 - Stable performance
 - Easy installation
