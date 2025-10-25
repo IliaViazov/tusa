@@ -31,6 +31,17 @@ else
     echo "export PATH=\"$PATH\"" >> ~/.bashrc
 fi
 
+# 1a. Install Python via homebrew
+if ! command_exists ghc ; then
+    echo "Installing Python via homebrew..."
+    brew install python3
+    echo "Python installation complete. You may need to restart your terminal or source your profile."
+    echo "export PATH=\"$PATH\"" >> ~/.bashrc
+else
+    echo "Python already installed."
+    echo "export PATH=\"$PATH\"" >> ~/.bashrc
+fi
+
 # 2. Install TidalCycles package
 if ! ghc-pkg list | grep -q tidal ; then
     echo "Installing TidalCycles..."
