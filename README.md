@@ -1,8 +1,8 @@
 ![Alt text](logo_preview.png)
 
-# tidalueb
+# Tidalueb
 
-tidalueb (*tidal* for *Tidal Cycles*, *-lueb* — wordplay: *-lueb* — *Lübeck*, *-lueb* = *-люб*, Russian analogue for Greek *-phil*) is a framework for Tidal Cycles that aims to provide fast performance, minimalism, and seamless usage during music practices.
+Tidalueb (*tidal* for *Tidal Cycles*, *-lueb* — wordplay: *-lueb* — *Lübeck*, *-lueb* = *-люб*, Russian analogue for Greek *-phil*) is a framework for Tidal Cycles that aims to provide fast performance, minimalism, and seamless usage during music practices.
 
 The framework functions as a tmux workflow with different panes of a terminal performing different parts of the program.
 It features an interpreter for Tidal Cycles, a snippets window for fast copying of precomposed material, a reference window that represents [the official reference](https://tidalcycles.org/docs/reference/cycles) in a brief format, and a SuperCollider server.
