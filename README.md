@@ -48,11 +48,12 @@ or
 ### Finish
 
 In the interpreter window, type:
-```sh
+```haskell
 :quit
-tmux kill-server
+-- or
+:q
 ```
-and then close the window.
+and then close the window. Native haskell commands :q and :quit are overwritten so that they automatically close the tmux session.
 
 ### Multi-line
 
