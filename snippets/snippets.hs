@@ -20,6 +20,12 @@ d1 $ "808bd" <| n (run 10)
 d2 $ "808ht" <| n (run 7)
 d3 $ slow "2 0.1 2.3 0.9" $ "808lt" <| n (run 12 |% "<3 1 2 3 14 12>")
 d4 $ jux(hurry 2) $ "east" <| n (run "<11 10 <23 10> 30 . 0.9>")
+d5 $ "bd" #cps "<0.9 10 20 0.1 <40 100> 1> 2"
+d6 $ "hh!32"
+d7 $ jux (hurry "<[10 2] [20 0.1] 30 100 200>") $ "cp!16 sn!23" #speed "10 20 0.1 2" #pan rand
+d8 $ "bd!10" #gain 2
+d9 $ "trump" <| n (run "10 2 3 4 5 1")
+
 
 d8 $ "breath ~ ~ ~ ~ breath*10 ~ breath!12" #octersub 1 #gain 2 #ringf 200 #ring 1 #leslie 1 #real (smooth "1 0.3 4.4 10.1 2.3") #imag (smooth "1 0.2 0.3 0.4 1") #cps "<10 1 0.5 20 32>"
 

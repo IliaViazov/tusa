@@ -25,3 +25,8 @@ instance Tidally where tidal = tidalInst
 
 :set prompt "\ESC[95m\STXtidal\ESC[m\STX> "
 :set prompt-cont ""
+
+-- custom quit command that kills tmux too
+
+:def! q    (\_ -> return ":! ./finish.sh; exit")
+:def! quit (\_ -> return ":! ./finish.sh; exit")
