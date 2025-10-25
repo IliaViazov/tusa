@@ -9,12 +9,13 @@ It features an interpreter for Tidal Cycles, a snippets window for fast copying 
 - Stable performance
 - Easy installation
 - Fast boot-up
+- Automatic saving of the session (memory of last 5, but could be increased modifying finish.sh)
 - Convenient keyboard shortcuts
 - Syntax highlighting
 - Reference as a cheat sheet
 - No need to press Cmd+C to copy; copying is automatic while selecting
 - For devs: all settings for dependencies are local and don't affect global .rc files
-- Should work in any modern Bash terminal
+- Theoretically should work in any modern Bash terminal (tested only on MacOS)
 
 ## Installation
 
@@ -26,9 +27,10 @@ git clone https://github.com/IliaViazov/tidalueb
 
 The following script assumes that you have installed `git` and `homebrew`. The installation process is as follows:
 - Installing Haskell
+- Installing Python
 - Installing the Tidal package for Haskell
-- Installing the nano editor
-- Installing glow
+- Installing the Nano editor
+- Installing Glow
 - Installing tmux
 - Installing SuperCollider and SuperDirt
 
@@ -67,13 +69,6 @@ d1 $ "bd sn bd sn"
 :}
 ```
 
-## References to the used resources and repos
-
-- Tidal Cycles: https://tidalcycles.org/
-- vim-tidal: https://github.com/tidalcycles/vim-tidal
-- Syntax Highlighting for Nano: https://github.com/scopatz/nanorc.git
-- Colored GHCI: https://github.com/rhysd/ghci-color/tree/master
-
 ## FAQ
 
 ### SuperCollider crashed during performance
@@ -100,3 +95,27 @@ The path may differ from the example.
 ### Don't like autocopying?
 
 Adjust `.tmux.conf` inside the repository's folder.
+
+## Future Plans
+
+- Full support on Linux and Windows
+- Additional sample library and SuperCollider library
+- Support of Beamforming via parameters `#x`, `#y`, `#z`
+- Direct Communication SynthDefs: OSC, MIDI, Serial, and G-Code
+- Easy multiplayer via tmux remote feature
+
+
+## References to the used resources, repos, and inspirations
+
+- [Tidal Cycles](https://tidalcycles.org/)
+- [SuperCollider](https://supercollider.github.io/)
+- [Nano](https://www.nano-editor.org/)
+- [Syntax Highlighting for Nano](https://github.com/scopatz/nanorc.git)
+- [vim-tidal](https://github.com/tidalcycles/vim-tidal)
+- [Glow](https://www.nano-editor.org/)
+- [tmux](https://github.com/tmux/tmux/wiki)
+- [Haskell](https://www.haskell.org/ghcup/)
+- [Colored GHCI](https://github.com/rhysd/ghci-color/tree/master)
+- [Python](https://www.python.org/)
+
+The project is done and mantained with a great support of the [SACMT](https://www.instagram.com/mhl.sacmt/) at Musikhochschule Lübeck.
