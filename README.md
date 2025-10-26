@@ -57,7 +57,7 @@ In the interpreter window, type:
 ```haskell
 :finish
 ```
-and then close the window. The command :finish is an alliance of hush, :quit and saving script that is written inside of BootTidal.hs
+and then close the window. The command `:finish` is an alliance of `hush`, `:quit` and saving script in `shell` that is written inside of `BootTidal.hs`
 
 ### Multi-line
 
