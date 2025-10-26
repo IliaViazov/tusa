@@ -55,11 +55,9 @@ or
 
 In the interpreter window, type:
 ```haskell
-:quit
--- or
-:q
+:finish
 ```
-and then close the window. Native haskell commands :q and :quit are overwritten so that they automatically close the tmux session.
+and then close the window. The command :finish is an alliance of hush, :quit and saving script that is written inside of BootTidal.hs
 
 ### Multi-line
 
