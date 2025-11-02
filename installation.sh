@@ -32,7 +32,7 @@ else
 fi
 
 # 1a. Install Python via homebrew
-if ! command_exists ghc ; then
+if ! command_exists python3 ; then
     echo "Installing Python via homebrew..."
     brew install python3
     echo "Python installation complete. You may need to restart your terminal or source your profile."
