@@ -13,8 +13,8 @@ command_exists() {
 ln -sf $PWD ~/tidalueb
 
 #0.b Creating an icon to the app and .command
-./setIcon.sh logo.png tidalueb.app
-./setIcon.sh logo.png tidalueb.command
+./config-util/setIcon.sh config-util/logo.png tidalueb.app
+./config-util/setIcon.sh config-util/logo.png tidalueb.command
 
 #0.c Update Homebrew
 echo "Updating Homebrew..."
@@ -46,14 +46,14 @@ fi
 if ! ghc-pkg list | grep -q tidal ; then
     echo "Installing TidalCycles..."
     cabal update
-    cabal install tidal
+    cabal install --lib tidal
     echo "export PATH=\"$PATH\"" >> ~/.bashrc
 else
     echo "TidalCycles already installed."
     echo "export PATH=\"$PATH\"" >> ~/.bashrc
 fi
 
-# 3.a Install Nano editor and highlight
+# 3.a Install Nano editor
 if ! command_exists nano ; then
     echo "Installing Nano editor..."
     brew install nano
@@ -94,12 +94,26 @@ else
 fi
 
 # 5. Install necessary Quarks for TidalCycles
-echo "Installing TidalCycles Quarks..."
+curl -Lk https://github.com/supercollider/sc3-plugins/releases/download/Version-3.13.0/sc3-plugins-3.13.0-macOS.zip --output /tmp/sc3plugins.zip
+	/bin/mkdir -p ~/Library/Application\ Support/SuperCollider/Extensions/SC3Plugins
+	unzip -nq /tmp/sc3plugins.zip -d ~/Library/Application\ Support/SuperCollider/Extensions/SC3Plugins
+    rm /tmp/sc3plugins.zip
+    echo "sc3-plugins installed"
+curl -Lk https://github.com/flucoma/flucoma-sc/archive/refs/tags/1.0.9.zip -o /tmp/flucoma-sc-1.0.9.zip
+    mkdir -p ~/Library/Application\ Support/SuperCollider/Extensions/Flucoma
+    unzip -nq /tmp/flucoma-sc-1.0.9.zip -d ~/Library/Application\ Support/SuperCollider/Extensions/Flucoma/
+    rm /tmp/flucoma-sc-1.0.9.zip
+    echo "flucoma installed"
+
+echo "Installing SuperDirt and Dirt Samples Quarks..."
 sclang -D <<EOL
-Quarks.install("https://github.com/tidalcycles/Dirt-Samples")
+Quarks.install("https://github.com/tidalcycles/Dirt-Samples");
+Quarks.install("https://github.com/musikinformatik/SuperDirt");
+
 s.waitForBoot {
     "Quarks installed".postln;
+    0.exit();
 };
 EOL
 
-echo "Setup complete! Please restart your terminal and enjoy TidalCycles."
+echo "Dirt Samples and SuperDirt are installed. Now everything should work"

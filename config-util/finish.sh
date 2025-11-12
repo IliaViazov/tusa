@@ -15,7 +15,7 @@ OUTPUT_FILE="$CAPTURE_DIR/session-$DATE.hs"
 tmux capture-pane -pS - > "$CAPTURE_FILE"
 
 # Run Python processor
-python3 processor.py "$CAPTURE_FILE" "$OUTPUT_FILE"
+python3 config-util/processor.py "$CAPTURE_FILE" "$OUTPUT_FILE"
 
 # Remove intermediate txt file
 rm -f "$CAPTURE_FILE"
