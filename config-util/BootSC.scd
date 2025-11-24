@@ -11,8 +11,8 @@ s.reboot { // server options are only updated on reboot
     // boot the server and start SuperDirt
 
 	// adjust here if you use something else
-	s.options.inDevice = "Built-In";
-	s.options.outDevice = "Built-In";
+	s.options.inDevice = "Default";
+	s.options.outDevice = "Default";
 
     s.waitForBoot {
         ~dirt = SuperDirt(2, s); // two output channels, increase if you want to pan across more channels
