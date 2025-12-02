@@ -4,7 +4,7 @@ s.reboot { // server options are only updated on reboot
     // see http://doc.sccode.org/Classes/ServerOptions.html
 	s.options.sampleRate = 44100;
     s.options.numBuffers = 1024 * 256; // increase this if you need to load more samples
-    s.options.memSize = 8192 * 32; // increase this if you get "alloc failed" messages
+    s.options.memSize = 8192 * 64; // increase this if you get "alloc failed" messages
     s.options.numWireBufs = 64; // increase this if you get "exceeded number of interconnect buffers" messages
     s.options.maxNodes = 1024 * 32; // increase this if you are getting drop outs and the message "too many nodes"
     s.options.numOutputBusChannels = 8; // set this to your hardware output channel size, if necessary
@@ -66,7 +66,7 @@ r.waitForBoot {
             sig,
             16,
             id: \ambix,
-            params: [3, 360]
+			params: [3, 0.875]
         );
         sig = VSTPlugin.ar(
             sig,
@@ -85,13 +85,9 @@ r.waitForBoot {
     ~ambix.open("ambix_encoder_i8_o3", editor: true);
     ~mcfx.open("mcfx_convolver24", editor: true);
 	r.sync;
-	~mcfx.readProgram("test.vstpreset");
+	~mcfx.readProgram("~/tidalueb/test.vstpreset");
 };
 
 OSCFunc({|msg| msg.postln}, 'status.reply', s.addr);
 s.status;
 );
-
-r.meter
-
-
