@@ -13,6 +13,10 @@ d1 $ jux (hurry 2.1)$ s "superfork" <| note (run "<30 32 12>" |/ "10 20 <120 5 2
 # squiz 1
 :}
 
+xfade 2 $ jux (hurry 2.1) $ "hh!32" #gain (fast "<20 1> <31 10 33 34 50>" $ sine) #cps "<2 1.3 3.5 0.1 10 0.3>" #distort 0.5
+
+
+
 d2 $ "supergrind supersnare sostoms sossnare" <| n (run 10 |- 1200 |/ 50)
 
 

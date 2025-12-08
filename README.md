@@ -26,7 +26,7 @@ It features an interpreter for Tidal Cycles, a snippets window for fast copying 
 ```sh
 cd path-to-directory
 git clone https://github.com/IliaViazov/tidalueb
-./installation.sh
+./installation-macos.sh
 ```
 
 The following script assumes that you have installed `git` and `homebrew`. The installation process is as follows:
@@ -120,4 +120,4 @@ Adjust `.tmux.conf` inside the repository's folder.
 - [Colored GHCI](https://github.com/rhysd/ghci-color/tree/master)
 - [Python](https://www.python.org/)
 
-The project is done and mantained with a great support of the [SACMT](https://www.instagram.com/mhl.sacmt/) at Musikhochschule Lübeck.
+The project is done and maintained with a great support of the [SACMT](https://www.instagram.com/mhl.sacmt/) at Musikhochschule Lübeck.
