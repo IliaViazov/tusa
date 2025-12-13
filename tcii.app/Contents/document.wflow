@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>531</string>
+	<string>533</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -52,7 +52,7 @@
 				<dict>
 					<key>fileNames</key>
 					<array>
-						<string>~/Desktop/Projects/tidalueb/tidalueb.command</string>
+						<string>~/Desktop/Projects/tcii/tcii.command</string>
 					</array>
 				</dict>
 				<key>BundleIdentifier</key>
@@ -102,8 +102,6 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
@@ -208,8 +206,6 @@
 						<string>0</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
@@ -223,7 +219,7 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>E4D799D9-BCD8-4A97-8E18-BD8A26F0D5A6</key>
+		<key>6A6C9B3B-6635-4C29-84E8-0D6D46A0C507</key>
 		<dict>
 			<key>from</key>
 			<string>579BA8F6-2718-4892-A9A7-E4306B00BC0A - 579BA8F6-2718-4892-A9A7-E4306B00BC0A</string>

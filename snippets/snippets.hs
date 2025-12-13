@@ -37,3 +37,8 @@ d8 $ "breath ~ ~ ~ ~ breath*10 ~ breath!12" #octersub 1 #gain 2 #ringf 200 #ring
 d1 $ jux(hurry 2)$ "bd sn cp sn" <| n (run 201) #gain rand #pan rand
 d2 $ "cp!16 sn!23" #cps "10 20 0.1 2"
 d3 $ "f f:2" <| n (run 120) #octer saw
+
+
+
+d4 $ jux(hurry $ smooth "2 10 2.01 3.1 <22.3 31 30 30.1>") $ "east" <| n (run $ smooth "<11 10 <23 10> 30 . 0.9>") #pan (fast "3 0.3 0.3 10 1.2 0.3" $ saw) #cps "<<0.3 <0.4 0.5>> <0.1 0.3? 0.3>>"
+
