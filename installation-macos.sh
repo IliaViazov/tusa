@@ -10,11 +10,11 @@ command_exists() {
 
 
 #0.a Creating a symlink from root to the app
-ln -sf $PWD ~/tidalueb
+ln -sf $PWD ~/tcii
 
 #0.b Creating an icon to the app and .command
-./config-util/setIcon.sh config-util/logo.png tidalueb.app
-./config-util/setIcon.sh config-util/logo.png tidalueb.command
+./config-util/setIcon.sh config-util/logo.png tcii.app
+./config-util/setIcon.sh config-util/logo.png tcii.command
 
 #0.c Update Homebrew
 echo "Updating Homebrew..."

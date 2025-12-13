@@ -1,6 +1,6 @@
 #!/bin/bash
 cd 
-REAL_PATH=$(readlink -f ~/tidalueb)
+REAL_PATH=$(readlink -f ~/tcii)
 cd "$REAL_PATH"
 
 tmux new-session -d -s mysession
