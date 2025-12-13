@@ -63,19 +63,4 @@ After that, it unpacks all the scripts and creates an application `tcii.app`, wh
 
 Currently, in my own artistic practice, I have expanded the initial setup of tcii to support a beam forming algorithm. The easiest and cheapest way was to implement it by creating an initial setup of SuperDirt with a multi-channel configuration of 8, and then passing these audio buses to Kronlachner's ambiX encoder, which encodes these 8 signals as a virtual space of 8-channel loudspeaker ring into B-Format for third-order ambisonics and then convolves it with mcfx convolver to use spatialisation with the IKO loudspeaker. This allowed to spatialise the sound across azimuth using only the native `#pan` function, as well as perform azimuth modulation up to the audio rate.
 
-References:
-- [Tidal Cycles](https://tidalcycles.org/)
-- [Tidal Cycles Documentation](https://github.com/tidalcycles/tidal-doc)
-- [SuperCollider](https://supercollider.github.io/)
-- [Nano](https://www.nano-editor.org/)
-- [Syntax Highlighting for Nano](https://github.com/scopatz/nanorc.git)
-- [vim-tidal](https://github.com/tidalcycles/vim-tidal)
-- [Glow](https://www.nano-editor.org/)
-- [tmux](https://github.com/tmux/tmux/wiki)
-- [Haskell](https://www.haskell.org/ghcup/)
-- [Colored GHCi](https://github.com/rhysd/ghci-color/tree/master)
-- [Python](https://www.python.org/)
-- [mcfx - Multi-Channel Plug-In Suite](https://www.matthiaskronlachner.com/?p=1910)
-- [ambiX - Ambisonic Plug-In Suite](https://www.matthiaskronlachner.com/?p=2015)
-- [Tidal Sound Explorer](https://github.com/ShaiRosenblit/tidal-sound-explorer)
-- [The Fluid Corpus Manipulation project](https://www.flucoma.org/)
+'''add here ML after Flucoma finished'''
