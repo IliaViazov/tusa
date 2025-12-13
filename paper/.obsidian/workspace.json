@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d874d849076e5f9a",
+        "id": "7b865606fb108007",
         "type": "tabs",
         "children": [
           {
-            "id": "0380bb5d79777068",
+            "id": "e938924d87aea398",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -169,8 +169,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "0380bb5d79777068",
+  "active": "e938924d87aea398",
   "lastOpenFiles": [
+    "paper.md",
     "ICMC 2026 Paper Templates/ICMC_2026_Word_Paper_Template.doc",
     "ICMC 2026 Paper Templates/ICMC_2026_LaTeX_Paper_Template.zip",
     "ICMC 2026 Paper Templates/ICMC_2026_ODT_Paper_Template.odt",

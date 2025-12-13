@@ -13,7 +13,7 @@ s.reboot { // server options are only updated on reboot
 
 	// adjust here if you use something else
 	s.options.inDevice = "Default";
-	s.options.outDevice = "VB-Cable";
+	s.options.outDevice = "Default";
 
     s.waitForBoot {
         ~dirt = SuperDirt(8, s); // two output channels, increase if you want to pan across more channels
@@ -44,12 +44,12 @@ r.reboot {
     r.options.memSize = 8192 * 32; // increase this if you get "alloc failed" messages
     r.options.numWireBufs = 64; // increase this if you get "exceeded number of interconnect buffers" messages
     r.options.maxNodes = 1024 * 32; // increase this if you are getting drop outs and the message "too many nodes"
-    r.options.numOutputBusChannels = 20; // set this to your hardware output channel size, if necessary
-    r.options.numInputBusChannels = 8; // set this to your hardware output channel size, if necessary
+    r.options.numOutputBusChannels = 64; // set this to your hardware output channel size, if necessary
+    r.options.numInputBusChannels = 64; // set this to your hardware output channel size, if necessary
     // boot the server and start SuperDirt
 
 	// adjust here if you use something else
-	r.options.inDevice = "VB-Cable";
+	r.options.inDevice = "Default";
 	r.options.outDevice = "Default";
 };
 r.waitForBoot {
@@ -61,7 +61,7 @@ r.waitForBoot {
         var sig, a, b;
         a = In.kr(aBus, 1);
         b = In.kr(bBus, 1);
-		sig = [SoundIn.ar(0),SoundIn.ar(1),SoundIn.ar(2),SoundIn.ar(3),SoundIn.ar(4),SoundIn.ar(5),SoundIn.ar(6),SoundIn.ar(7)];
+		sig = [SoundIn.ar(30),SoundIn.ar(31),SoundIn.ar(32),SoundIn.ar(33),SoundIn.ar(34),SoundIn.ar(35),SoundIn.ar(36),SoundIn.ar(37)];
         sig = VSTPlugin.ar(
             sig,
             16,
@@ -73,7 +73,7 @@ r.waitForBoot {
             20,
             id: \mcfx
         );
-		Out.ar(0, Limiter.ar(sig));
+		Out.ar(32, Limiter.ar(sig));
     }).add;
     r.sync;
     ~spat = Synth(\spat, [

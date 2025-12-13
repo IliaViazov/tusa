@@ -1,51 +1,39 @@
-# Tidalüb 
-# Live-Coding through Instrumental Paradigm
+# tcii 
+# Tidal Cycles Instrumental Interface
 
 ## Abstract
 
-
+Overview of Software DMI "tcii" (stands for "Tidal Cycles Instrumental Interface") for Tidal Cycles live-coding programming language implemented in the terminal. tcii creates a seamless workflow for improvisation and learning, oriented to personal use as an instrument that could be set up in a few seconds and run locally. 
+In the article, I provide an overview of how the program is organised, as well as showing examples of my artistic practice with Tidal Cycles in areas of ambisonics and machine learning.
 ## Introduction
 
-Interface shapes the interaction, as well as interaction shows the weak and strong points of the interface. Minimal interface of the computer (mouse/touchpad and keyboard as an input, and feedback-responsive screen and loudspeakers) created as well very minimal interaction with it, keeping at the same time your laptop as the most powerful in the meaning of DSP-performance synthesizer that probably you have at home as a professional electronic musician.
+Interface shapes the interaction, and the way the interaction occurs defines the interface's overall usability, influencing its evolution.  The minimal interface of the computer (mouse/touchpad and keyboard as an input, and screen with loudspeakers as feedback devices) doesn't create much of a field for interaction, rather absolutely loses the battle in comparison with your phone, but is at the same time probably the most powerful and practical DSP device that a musician has at home. 
+The computer was not designed with the thought of making it a good DMI. It lacks different types of interaction, which is why we always try to extend it using peripheral devices. Lacking a variety of interactions via interface surface, on the other hand, the computer proposes another beneficial side — very accurate work with information, leading it to be used as a magical black box that can calculate everything and be connected to peripheral devices, with which a person usually has already performative interaction (MIDI-keyboard, DIY-controllers, etc).
+Live-Coding, as an improvisational/compositional performative practice, uses these limitations and abuses the ability of the computer to precisely generate the desired result to create funky sounds, giving the computer keyboard new performative instrumental qualities. 
+tcii (or "Tidal Cycles Instrumental Interface") is a framework for the Tidal Cycles programming language that tries to accomplish several needs during live-coding practice in this language. It creates a TUI for Tidal Cycles in the Terminal, that supports interaction with the interpreter of the language, SuperCollider server, a very basic text editor and a reference of the language, keeping the setup very minimal, but on the other hand, able to handle greater abuse of the system, still having nice UI features like auto-saving and auto-copying. 
 
-Live-Coding, as an improvisational/compositional performative practice, became a very important part of the currents, bringing the laptop from its traditional role as a magic box into the realm of instruments and live musical performance. The computer was not designed with the thought of making it a good musical instrument. Its interface lacks different types of interaction, which is why we always try to extend it using aggregate devices (from simple to more complex). Live-Coding, on the other hand, is using computers' primary ability — describing information flow through encrypted keyboard messages. 
+## tcii
 
-Tidalüb is a framework solution for TidalCycles. TidalCycles is a programming language for generating sequences with prerecorded samples or preprogrammed SynthDefs in SuperCollider. Tidalüb brings many necessary and useful utilities together in one application, providing better and more reliable execution, access to prepared snippets and the reference during performance, as well as easier installation.
+The traditional variant of the installation of Tidal Cycles requires having several units of the software, and the experience of going through that might be considered extreme for a beginner/intermediate laptop user. Also as running and managing several applications at once can be challenging, and sometimes does not provide stable performance in the situation of stressed code execution. Building this framework, I was trying to solve my personal performative problems, which I wanted to improve in my setup of Tidal Cycles, as well as creating a reusable platform for other people that can offer easier expansion, allowing the system to execute something more. Many of the decisions were dictated out of thinking in the instrumental paradigm of laptop playing, trying to notice what actually falls out, missing in the interface what would allow me as a performer to be a bit happier. 
 
-## Live-Coding as a Praxis. Understanding the computer as an instrument.
-
-## Overview of TidalCycles as a programming language and toolchain for it
-
-Practising and performing with the traditional setup of TidalCycles using Pulsar and bootloader in SuperCollider IDE, I found myself lacking some things that I would love to have with TidalCycles, like: an easy and automated way of booting it up, a reference window, and the ability to monitor everything in one window. My machine also didn't like Pulsar as an IDE, and it always crashed somewhere during the setup time.
-
-## Tidalüb Overview
-
-Building this framework, I was trying to solve my personal performative problems that I wanted to improve in my setup of TidalCycles, as well as creating a platform which can be reused by other people who would like to jump into live-coding and use their laptop as an instrument with TidalCycles. Many of the decisions were dictated out of thinking in the instrumental paradigm of playing the laptop. One of my interests is also keeping this framework as FLOSS, so only Free/Libre Software was used as building parts, as well as all sources were credited.
-
-After some thinking process, I decided to establish a workflow that runs directly in the terminal through tmux that supports different parts of the application:
+After some thinking process, I decided to establish a workflow that runs directly in the terminal through a terminal multiplexer that supports different parts of the application:
 1) TidalCycles REPL
 2) Snippets window, which you can use for pre-written material
 3) Reference window with small cheat-sheets (abstraction of the original documentation)
-4) SuperCollider interpreter
-
-Implementation of it in the terminal seemed to me like a quite reasonable solution at that point:
-- All parts of the environment are available as scripts that could be run in the shell.
-- Almost the absence of the GUI can provide more resources for performance, allowing to do more crazy stuff
+4) Super Collider Server
 
 ### TidalCycles REPL
 
-For the TidalCycles REPL part, was used a GHCi, an an interactive environment for functional programming language Haskell, that lays in the heart of TidalCycles. The GHCi runs an interpreter for TidalCycles via a Haskell Package that was originally developed by Alex McLean. On top of traditional GHCi, I've installed a very simple syntax highlighting to create a bit better readability for the user.
-TidalCycles package for Haskell 
-Addition was a command `:finish` for REPL that runs a script, that closes all the processes and saves your REPL session as a separate file with prompts, so you can look through it for some future material.
+For the Tidal Cycles REPL, I used direct implementation in GHCi. The GHCi runs an interpreter for TidalCycles via a Haskell Package that was originally developed by Alex McLean. On top of traditional GHCi, a very simple syntax highlighting was installed to create better readability for the user. 
+In addition to a traditional TidalCycles booter was a command `:finish` for REPL that runs a script, closing all the processes, including backend, and saves your REPL session as a separate file with prompts, so you can look through it for some future material.
 
 ### Snippets
 
-Okay, in the most minimal way, I can already use TidalCycles with the REPL, but what if I would like to have some snippets? For that was included a snippets window was included, which basically is just a Nano Editor window — a free-libre text-editor that comes with probably any bash shell automatically, so usually there is even no need to install it. Nano opens a .hs file and allows you to edit text in format .hs with syntax highlighting, copy via just selecting the text (no need to press `Cmd+C`) and paste it into the REPL Window. All traditional Nano shortcuts were reconfigured to be more common once (comparison: `Ctl+X` vs `Ctl+Q` to quit the program, or `Ctl+O` vs `Ctl+S` to save your file), but with a local configuration file, which doesn't affect global settings of the Nano editor, in case it's needed.
-In the future, it would be nice to also evaluate command lines from there, but it will be a task for the future.
+Interpreter allows you to execute the command in an interactive way, but doesn't allow you the ability to edit the text. To solve that problem was included a separate pane for Nano editor — a free-libre text editor that comes with probably any bash shell automatically, so usually there is no need to install it. Nano opens a `.hs` file and allows you to edit text with syntax highlighting, copy via just selecting the text (no need to press `Cmd+C`, which can significantly save time during performance) and paste it into the REPL Window. All traditional Nano shortcuts were reconfigured to be more common once (comparison: default Nano `Ctl+X` vs common `Ctl+Q` to quit the program), but with a local configuration file, which doesn't affect global settings of the Nano editor, in case it's needed.
 
 ### Reference
 
-Original documentation of TidalCycles exists in the format of a Website and a repository, but not as something integrated and adjusted for fast use during improvisation, in situations when you forget something or keep running into a syntax mistake.
+Original documentation of TidalCycles exists in the format of a Website and a repository, but not as something integrated and adjusted for fast use during improvisation, in situations when you forget something or keep running into a syntax mistake, or just simply remind yourself, or even learn.
 
 I took the original documentation and reduced it to smaller definitions, creating a set of cheat-sheets, which can be used even during performance. Currently, it supports the following sections of the original documentation:
 - Notation and Syntax
@@ -55,31 +43,25 @@ I took the original documentation and reduced it to smaller definitions, creatin
 - Oscillators and Generators
 - Transitions
 
-All of these pages are written as `.md` files, and run in the Glow Markdown Reader for the Terminal, which allows you to navigate through the documentation using you arrow keys and mouse.
+All of these pages are written as `.md` files, and run in the Glow Markdown Reader for the Terminal, which allows you to navigate through the documentation using your arrow keys and mouse.
 
 ### SuperCollider
 
-SuperCollider part was realized as a scsynth running in a separate terminal pan, with a standard TidalCycles bootloader that we can find in the original documentation, with little adjustments to always choose your Default Sound Device, to which you are connected in the main settings (to minimize the setup time, if we speak of traditional stereo playing). Also server is loaded with an OSCFunc that posts the stats of the server to keep track if you are on the edge of a crash.
+SuperCollider part was realised as a running server in a separate terminal pane, with a standard TidalCycles bootloader, with little adjustments to always choose your Default Sound Device, to which you are connected in the main settings of the computer (to minimise the setup time, if we speak of traditional stereo playing). Also server is loaded with an OSCFunc that posts the stats of the server to keep track if you are on the edge of a crash.
 
 ### Installation and Setup
 
-All installation scripts were organized in one main script that essentially does next:
+All installation scripts were organised in one main script that essentially does next:
 - Installs Haskell and Python (for autosaving feature);
 - TidalCycle package for Haskell;
 - Nano, Glow, tmux;
 - SuperCollider and dependencies;
 
-After that, it unpacks all the scripts and creates an application `tidalueb.app`, which refers to the file with a bash script in the repositories folder, but much nicer to use, because you can call it even from Finder. 
+After that, it unpacks all the scripts and creates an application `tcii.app`, which refers to the file with a bash script in the repositories folder, but much nicer to use, because you can call it even from Finder. 
 
-### Current work and plans
+### Personal use of the system
 
-Currently, the development is going in the direction of supporting advanced ways of spatialisation with beam forming algorithms. Now the version supports test version beam forming for the third-order ambisonics, intended to be used with the IKO loudspeaker, which is currently available at the Musikhochschule Lübeck. Now it is done with a sort of illegal trick. Original SuperDirt signal is wrapped around 8-channel straight spatialisation and then parsed through SuperCollider server into the **i8->o3 encoder** with equal spacing of the input channels across the azimuth, and then convolved by **mcfx_convolver24** onto the surface of the IKO with corrected filtering.
-
-I would say that it is a very rough and hacky solution, but it does its work, creating a virtual space of an 8-channel equally spaced loudspeaker ring, not overriding any of the original SuperDirt Methods, and is still comfortable using syntax with `#pan` parameter.
-Later, it is planned to integrate beam forming algorithms on the level of SuperDirt's Class, so that each of the Orbits could be addressed with their own encoding parameters of azimuth and elevation.
-
-In the future, I plan to add an interface with an ML agent, to which you can give a query in a filtering manner (accessing playback through analysed features of the sound source, like: harmonicty, chroma, MFCC, etc.). The idea was taken from Shai Rosenblitt and implemented as a test build of Tidalüb to understand the interactions with this part of the software. This version functions in the way that it generates two TidalCycles listeners, which creates a certain level of latency (considering that all of that goes also through Python). The final implementation is considered to be done as different SynthDefs in SuperCollider using the Flucoma library.
-
+Currently, in my own artistic practice, I have expanded the initial setup of tcii to support a beam forming algorithm. The easiest and cheapest way was to implement it by creating an initial setup of SuperDirt with a multi-channel configuration of 8, and then passing these audio buses to Kronlachner's ambiX encoder, which encodes these 8 signals as a virtual space of 8-channel loudspeaker ring into B-Format for third-order ambisonics and then convolves it with mcfx convolver to use spatialisation with the IKO loudspeaker. This allowed to spatialise the sound across azimuth using only the native `#pan` function, as well as perform azimuth modulation up to the audio rate.
 
 References:
 - [Tidal Cycles](https://tidalcycles.org/)
