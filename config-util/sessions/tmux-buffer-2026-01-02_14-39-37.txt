@@ -1,0 +1,38 @@
+./config-util/ghci-color -ghci-script 'config-util/BootTidal.hs'
+ilia_viazov@MacBookPro tusa % ./config-util/ghci-color -ghci-script 'config-util/Bo
+otTidal.hs'
+Loaded package environment from /Users/ilia_viazov/.ghc/aarch64-darwin-9.6.7/enviro
+nments/default
+GHCi, version 9.6.7: https://www.haskell.org/ghc/  :? for help
+[TidalCycles version 1.10.1]
+Installed in /Users/ilia_viazov/.local/state/cabal/store/ghc-9.6.7/tdl-1.10.1-3f7ff
+30f/share
+Listening for external controls on 127.0.0.1:6010
+Loaded GHCi configuration from config-util/BootTidal.hs
+tusa> :q
+Leaving GHCi.
+ilia_viazov@MacBookPro tusa % cd config-util
+ilia_viazov@MacBookPro config-util % ./finish.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,19 +17,19 @@ def extract_prompts_to_hs(input_file, output_file):
                 found_superdirt = True
             continue
 
-        # If we're skipping due to an <interactive> error, ignore until next tidal>
+        # If we're skipping due to an <interactive> error, ignore until next tusa>
         if skip_until_next_prompt:
-            if line.startswith("tidal>"):
+            if line.startswith("tusa>"):
                 skip_until_next_prompt = False  # stop skipping
                 # Save previous (if any) and start new prompt
                 if current_prompt:
                     prompts.append(current_prompt.strip())
-                current_prompt = re.match(r'^tidal>\s*(.*)', line).group(1).rstrip()
+                current_prompt = re.match(r'^tusa>\s*(.*)', line).group(1).rstrip()
             # otherwise continue skipping
             continue
 
         # Detect new prompt start
-        m = re.match(r'^tidal>\s*(.*)', line)
+        m = re.match(r'^tusa>\s*(.*)', line)
         if m:
             # Save previous prompt, if any
             if current_prompt:
@@ -38,7 +38,7 @@ def extract_prompts_to_hs(input_file, output_file):
             current_prompt = m.group(1).rstrip()
             continue
 
-        # If an <interactive> appears, drop current prompt and skip until next tidal>
+        # If an <interactive> appears, drop current prompt and skip until next tusa>
         if "<interactive>" in line:
             current_prompt = None
             skip_until_next_prompt = True
