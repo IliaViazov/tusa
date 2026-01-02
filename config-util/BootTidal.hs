@@ -30,4 +30,3 @@ instance Tidally where tidal = tidalInst
 
 -- custom quit commands that first hush Tidal, then quit (and run finish.sh)
 :def finish (\_ -> return "hush\npanic\n:! ./config-util/finish.sh\n:quit")
-:def f (\_ -> return "hush\npanic\n:! ./config-util/finish.sh\n:quit")
