@@ -2,12 +2,13 @@
 
 Tidal Unit for Sonic Activities.
 
-The framework functions as a tmux workflow with different panes of a terminal performing different parts of the program.
-It features an interpreter for Tidal Cycles, a snippets window for fast copying of precomposed material, a reference window that represents [the official reference](https://tidalcycles.org/docs/reference/cycles) in a brief format, and a SuperCollider server.
+***tusa*** is a framework application, that binds together all necessary utilities for Tidal Cycles into one Bash script. It features an interpreter for Tidal Cycles, a snippets window for fast copying of precomposed material, a reference window that represents [the official reference](https://tidalcycles.org/docs/reference/cycles) in a brief format, and a SuperCollider server.
+
+***tusa*** is modular and extendable, you can find different version made for my personal purposes, including working with Flucoma and ML inside of Tidal Cycles, and advanced live-spatialisation techniques for IKO. Soon, I will add documentation for it too. 
 
 ## Features
 - Stable performance
-- Easy installation
+- Easy installation (relatively, and only for Mac now)
 - Fast boot-up
 - Automatic saving of the session (memory of last 10, but could be increased modifying finish.sh)
 - Convenient keyboard shortcuts
@@ -40,8 +41,9 @@ The following script assumes that you have installed `git` and `homebrew`. The i
 
 ```sh
 cd path-to-directory
-./tusa.command
+./tusa
 ```
+You can also add the folder with tusa to your *PATH* variable, so you can just call it without physical address.
 
 ### Finish
 
