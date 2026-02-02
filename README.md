@@ -94,11 +94,11 @@ Adjust `.tmux.conf` inside the repository's folder.
 
 ## Future Plans
 
-- Full support on Linux and Windows
-- Additional sample library and SuperCollider library
-- Support of Beamforming via parameters `#x`, `#y`, `#z`
-- Direct Communication SynthDefs: OSC, MIDI, Serial, and G-Code
-- Easy multiplayer via tmux remote feature
+- [ ] Full support on Linux and Windows
+- [ ] Additional sample library and SuperCollider library
+- [x] ~~Support of Beamforming via parameters `#x`, `#y`, `#z`~~
+- [ ] Direct Communication SynthDefs: OSC, MIDI, Serial, and G-Code
+- [ ] Easy multiplayer via tmux remote feature
 
 
 ## References to the used resources, repos, and inspirations
