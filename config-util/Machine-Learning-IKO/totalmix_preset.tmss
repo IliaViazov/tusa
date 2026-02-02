@@ -8353,8 +8353,8 @@
 			<val e="Slider 00 165" v="0.00,"/>
 			<val e="Slider 00 166" v="0.00,"/>
 			<val e="Slider 00 167" v="0.00,"/>
-			<val e="Slider 00 168" v="0.00,"/>
-			<val e="Slider 00 169" v="0.00,"/>
+			<val e="Slider 00 168" v="1.20,"/>
+			<val e="Slider 00 169" v="1.20,"/>
 			<val e="Slider 00 170" v="0.00,"/>
 			<val e="Slider 00 171" v="0.00,"/>
 			<val e="Slider 00 172" v="0.00,"/>
@@ -8537,7 +8537,9 @@
 			<val e="Slider 48 174" v="0.00,"/>
 			<val e="Slider 48 175" v="0.00,"/>
 			<val e="Slider 48 256" v="0.00,"/>
+			<val e="Pan 48 256" v="-0.06,"/>
 			<val e="Slider 49 256" v="0.00,"/>
+			<val e="Pan 49 256" v="-0.06,"/>
 			<val e="Slider 50 176" v="0.00,"/>
 			<val e="Slider 50 177" v="0.00,"/>
 			<val e="Slider 50 256" v="0.00,"/>
@@ -8738,8 +8740,8 @@
 			<val e="Slider 130 165" v="0.00,"/>
 			<val e="Slider 130 166" v="0.00,"/>
 			<val e="Slider 130 167" v="0.00,"/>
-			<val e="Slider 130 168" v="0.00,"/>
-			<val e="Slider 130 169" v="0.00,"/>
+			<val e="Slider 130 168" v="1.20,"/>
+			<val e="Slider 130 169" v="1.20,"/>
 			<val e="Slider 130 170" v="0.00,"/>
 			<val e="Slider 130 171" v="0.00,"/>
 			<val e="Slider 130 172" v="0.00,"/>
@@ -8835,7 +8837,7 @@
 			<val e="MidiOut" v=""/>
 			<val e="MidiSelBus" v="0"/>
 			<val e="MidiSelChannel" v="0"/>
-			<val e="MidiSelSubmix" v="12"/>
+			<val e="MidiSelSubmix" v="130"/>
 			<val e="MCSupport" v="1"/>
 			<val e="MCExtender" v="0"/>
 			<val e="MCSelSubmixInPb" v="0"/>
@@ -8900,7 +8902,7 @@
 		<OscRemote0>
 			<val e="OscSelBus" v="0"/>
 			<val e="OscSelChannel" v="0"/>
-			<val e="OscSelSubmix" v="12"/>
+			<val e="OscSelSubmix" v="130"/>
 			<val e="OSCRemoteInUse" v="1"/>
 			<val e="OSCOwnPort" v="7001"/>
 			<val e="OSCRemotePort" v="9001"/>

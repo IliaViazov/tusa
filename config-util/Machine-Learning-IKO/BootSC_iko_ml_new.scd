@@ -7,14 +7,14 @@ s.reboot { // server options are only updated on reboot
     s.options.memSize = 8192 * 64; // increase this if you get "alloc failed" messages
     s.options.numWireBufs = 64; // increase this if you get "exceeded number of interconnect buffers" messages
     s.options.maxNodes = 1024 * 32; // increase this if you are getting drop outs and the message "too many nodes"
-    s.options.numOutputBusChannels = 48; // set this to your hardware output channel size, if necessary
-    s.options.numInputBusChannels = 48; // set this to your hardware output channel size, if necessary
+    s.options.numOutputBusChannels = 64; // set this to your hardware output channel size, if necessary
+    s.options.numInputBusChannels = 64; // set this to your hardware output channel size, if necessary
     // boot the server and start SuperDirt
 
 	// adjust here if you use something else
 	s.options.inDevice = "Default";
 	s.options.outDevice = "Default";
-	s.volume = -18;
+	s.volume = -12;
 
     s.waitForBoot {
         ~dirt = SuperDirt(8, s); // two output channels, increase if you want to pan across more channels
@@ -150,5 +150,7 @@ SynthDef(\sergeXY, { |out = 0, gain = 0.2, sliceBus = 128, n=0, pan, rate = 1, f
 );
 );
 });
+
+s.meter;
 
 });
