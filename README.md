@@ -6,6 +6,8 @@ Tidal Unit for Sonic Activities.
 
 ***tusa*** is modular and extendable, you can find different version made for my personal purposes, including working with Flucoma and ML inside of Tidal Cycles, and advanced live-spatialisation techniques for IKO. Soon, I will add documentation for it too. 
 
+Example of use: [here](https://iliaviazov.bandcamp.com/album/khorovody)
+
 ## Features
 - Stable performance
 - Easy installation (relatively, and only for Mac now)
