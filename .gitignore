@@ -1,0 +1,10 @@
+# Ignore everything inside sessions
+/sessions/*
+/snippets/*
+
+# But keep the placeholder file
+!/sessions/.gitkeep
+
+# But keep the placeholder file
+!/snippets/snippets.hs
+!/snippets/.gitkeep
